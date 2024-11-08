@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room Color Visualizer</title>
+    <title>Room Background Color Visualizer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Room Color Visualizer</h1>
+        <h1>Room Background Color Visualizer</h1>
         
         <!-- Image Upload Section -->
         <input type="file" id="uploadImage" accept="image/*">
         
-        <!-- Display Uploaded Image -->
+        <!-- Display Original and Masked Image -->
         <div class="image-container">
-            <canvas id="roomCanvas"></canvas>
+            <canvas id="originalCanvas"></canvas>
+            <canvas id="maskedCanvas" style="display:none;"></canvas>
+            <canvas id="outputCanvas"></canvas> <!-- Canvas to show final output -->
         </div>
         
-        <!-- Color Palette -->
+        <!-- Color Picker -->
         <div class="color-palette">
-            <label for="colorPicker">Choose a Color:</label>
+            <label for="colorPicker">Choose Background Color:</label>
             <input type="color" id="colorPicker">
-            <button id="applyColor">Apply Color</button>
+            <button id="applyColor">Apply Color to Background</button>
         </div>
     </div>
 
